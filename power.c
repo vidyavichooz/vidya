@@ -1,18 +1,23 @@
-#include<stdio.h> 
-int power(int x, unsigned int y) 
-{ 
-    if (y == 0) 
-        return 1; 
-    else if (y%2 == 0) 
-        return power(x, y/2)*power(x, y/2); 
-    else
-        return x*power(x, y/2)*power(x, y/2); 
-} 
-int main() 
-{ 
-    int x = 2; 
-    unsigned int y = 3; 
-  
-    printf("%d", power(x, y)); 
-    return 0; 
-} 
+#include <stdio.h>
+int main()
+{
+    int base, exponent;
+
+    long long result = 1;
+
+    printf("Enter a base number: ");
+    scanf("%d", &base);
+
+    printf("Enter an exponent: ");
+    scanf("%d", &exponent);
+
+    while (exponent != 0)
+    {
+        result *= base;
+        --exponent;
+    }
+
+    printf("Answer = %lld", result);
+
+    return 0;
+}
