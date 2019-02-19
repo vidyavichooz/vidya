@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<conio.h>
 void main()
 {
 int n,m,n1,temp=0,c,i;
@@ -22,4 +23,5 @@ else
 printf(" not an armstrong");
 }
 }
+ getch();
 }
